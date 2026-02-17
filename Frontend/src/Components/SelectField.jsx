@@ -3,7 +3,7 @@ import React from 'react';
 const SelectField = ({ label, name, value, onChange, options }) => {
   return (
     <div className="flex flex-col gap-1">
-      <label className="text-[#1a237e] font-bold text-sm">
+      <label className="text-[#000000] font-bold text-sm">
         {label}<span className="text-red-600">*</span>
       </label>
       <div className="relative">
@@ -11,7 +11,7 @@ const SelectField = ({ label, name, value, onChange, options }) => {
           name={name}          
           value={value}         
           onChange={onChange}  
-          className="border border-gray-300 rounded px-3 py-2 outline-none focus:border-[#3c1ee6] w-full bg-white appearance-none text-gray-700"
+          className="border border-gray-300 rounded px-3 py-2 outline-none focus:border-[#000000] w-full bg-white appearance-none text-gray-700"
         >
           
           {options.map((opt, i) => (

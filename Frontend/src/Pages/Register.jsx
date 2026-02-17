@@ -133,7 +133,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans pb-20">
       {/* Main Header */}
-      <header className="bg-[#1e5de6] py-6 px-4 shadow-md sticky top-0 z-50">
+      <header className="bg-[#000000] py-6 px-4 shadow-md sticky top-0 z-50">
         <h1 className="text-center text-white text-2xl font-bold leading-tight">
           Employee Joining<br />Details
         </h1>
@@ -143,17 +143,17 @@ const handleSubmit = async (e) => {
 
         {/* --- Section 1: Photo Upload --- */}
         <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center">
-          <label className="text-[#1a237e] font-bold mb-4">Passport Size Photo<span className="text-red-600">*</span></label>
+          <label className="text-[#000000] font-bold mb-4">Passport Size Photo<span className="text-red-600">*</span></label>
           
           <div className="border-2 border-gray-300 rounded-lg w-48 h-56 flex items-center justify-center bg-white mb-4 relative overflow-hidden">
             {formData.photo ? (
               <img src={URL.createObjectURL(formData.photo)} alt="Preview" className="w-full h-full object-cover" />
             ) : (
-              <div className="bg-[#2c86d4] text-white p-1 rounded text-xs">?</div>
+              <div className="bg-[#575757] text-white rounded text-xs"></div>
             )}
           </div>
           
-          <label htmlFor="img" className="cursor-pointer bg-[#3b82f6] hover:bg-blue-600 text-white font-medium py-2 px-6 rounded flex items-center gap-2 transition-colors">
+          <label htmlFor="img" className="cursor-pointer bg-[#444444] hover:bg-blue-600 text-white font-medium py-2 px-6 rounded flex items-center gap-2 transition-colors">
             <Upload size={18} />
             Add Photo
           </label>
@@ -161,10 +161,10 @@ const handleSubmit = async (e) => {
         </div>
 
         {/* --- Section 2: Personal Details --- */}
-        <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
+        <div className="bg-[white] rounded-xl shadow-sm p-6 pt-10 relative mt-8">
           {/* Floating Pill Header */}
           <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#000000] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Personal Details
              </span>
           </div>
@@ -182,7 +182,7 @@ const handleSubmit = async (e) => {
             {/* Phone with Prefix */}
             
             <div className="flex flex-col gap-1">
-              <label className="text-[#1a237e] font-bold text-sm">Contact Number<span className="text-red-600">*</span></label>
+              <label className="text-[#000000] font-bold text-sm">Contact Number<span className="text-red-600">*</span></label>
               <div className="flex">
                 <span className="bg-gray-200 border border-gray-300 border-r-0 rounded-l px-3 py-2 text-gray-600 flex items-center">+91</span>
                 <input 
@@ -197,7 +197,7 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-[#1a237e] font-bold text-sm">Emergency Contact Number<span className="text-red-600">*</span></label>
+              <label className="text-[#000000] font-bold text-sm">Emergency Contact Number<span className="text-red-600">*</span></label>
               <div className="flex">
                 <span className="bg-gray-200 border border-gray-300 border-r-0 rounded-l px-3 py-2 text-gray-600 flex items-center">+91</span>
                 <input 
@@ -237,12 +237,12 @@ const handleSubmit = async (e) => {
         {/* --- Section 3: Emergency Contact Details --- */}
         <div className="bg-white rounded-xl shadow-sm p-6 pt-12 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#000000] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Emergency Contact Details
              </span>
           </div>
           
-          <p className="text-[#1a237e] text-sm font-medium mb-6">
+          <p className="text-[#000000] text-sm font-medium mb-6">
             Three immediate family members contact details (Name/Contact Numbers/Relation) for Emergency
           </p>
 
@@ -276,7 +276,7 @@ const handleSubmit = async (e) => {
         {/* --- Section 4: Professional Details --- */}
         <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#000000] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Professional Details
              </span>
           </div>
@@ -293,7 +293,7 @@ const handleSubmit = async (e) => {
          {/* --- Section 5: Account Details --- */}
          <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#000000] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Account Details
              </span>
           </div>
@@ -308,7 +308,7 @@ const handleSubmit = async (e) => {
 
         {/* Submit Button Area */}
         <div className="mt-6">
-           <button onClick={handleSubmit} className="w-full bg-[#3c1ee6] text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-blue-700 transition">
+           <button onClick={handleSubmit} className="w-full bg-[#4d4d4d] text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-blue-700 transition">
              Submit Details
            </button>
         </div>
