@@ -15,4 +15,5 @@ const InputField = ({ label, name, value, onChange, type="text", placeholder, up
     </div>
   )
 }
+
 export default InputField;

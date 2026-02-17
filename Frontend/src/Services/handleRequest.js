@@ -19,4 +19,5 @@ export const handleRequest = async (apiFunc, successMsg = "Success", callback = 
     toast.error(errorMsg, { id: tid })
     return null
   }
+  
 };

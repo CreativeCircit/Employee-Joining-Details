@@ -13,6 +13,7 @@ const SelectField = ({ label, name, value, onChange, options }) => {
           onChange={onChange}  
           className="border border-gray-300 rounded px-3 py-2 outline-none focus:border-[#3c1ee6] w-full bg-white appearance-none text-gray-700"
         >
+          
           {options.map((opt, i) => (
             <option key={i} value={opt}>
               {opt}
