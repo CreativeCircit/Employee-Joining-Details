@@ -8,6 +8,7 @@ const PublicRouter = () => {
 
   if (loading) {
     return <Loading />;
+    
   }
   if (profileData) {
     return <Navigate to="/dashboard" replace />;

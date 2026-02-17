@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import Profile from "../Pages/Profile";
 
 export const router = createBrowserRouter(
+  
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route element={<PublicRouter />}>

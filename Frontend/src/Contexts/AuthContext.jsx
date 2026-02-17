@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }) => {
       console.log(response.data);
       
       setProfileData(response.data); 
+      
     } catch (error) {
       // If error (e.g., 401 Unauthorized), we just set profile to null
       setProfileData(null);

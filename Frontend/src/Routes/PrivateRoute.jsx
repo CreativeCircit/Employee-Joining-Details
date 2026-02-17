@@ -6,7 +6,8 @@ import Loading from "../Components/Loading";
 function PrivateRoute() {
   const { profileData, loading } = useAuth();
 
-  if (loading) {
+  if (loading) 
+    {
     return <Loading />;
   }
   if (!profileData) {

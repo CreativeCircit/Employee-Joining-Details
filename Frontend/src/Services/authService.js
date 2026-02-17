@@ -18,6 +18,7 @@ const authService = {
       window.location.href = "/";
     }
   },
+  
 
   getProfile: async () => {
     const { data } = await api.get("/users/me");
