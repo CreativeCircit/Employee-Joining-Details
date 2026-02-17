@@ -1,7 +1,7 @@
 const InputField = ({ label, name, value, onChange, type="text", placeholder, uppercase }) => {
   return (
     <div className="flex flex-col gap-1">
-      <label className="text-[#1a237e] font-bold text-sm">
+      <label className="text-[#000000] font-bold text-sm">
         {label}<span className="text-red-600">*</span>
       </label>
       <input 

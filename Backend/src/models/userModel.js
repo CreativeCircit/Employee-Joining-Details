@@ -86,12 +86,11 @@ const userModel = new mongoose.Schema(
 
     // --- Section 5: Account Details ---
     accountDetails: {
-      uanNumber: { type: String, required: true, unique: true },
-      bankName: { type: String, required: true },
-      bankAccountNumber: { type: String, required: true },
+      uanNumber: { type: String,  unique: true },
+      bankName: { type: String, },
+      bankAccountNumber: { type: String, },
       ifscCode: { 
         type: String, 
-        required: true, 
         uppercase: true 
       },
     }
