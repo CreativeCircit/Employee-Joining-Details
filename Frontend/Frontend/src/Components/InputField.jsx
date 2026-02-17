@@ -10,7 +10,7 @@ const InputField = ({ label, name, value, onChange, type="text", placeholder, up
         onChange={onChange} 
         type={type} 
         placeholder={placeholder}
-        className={`border border-gray-300 rounded px-3 py-2 outline-none focus:border-[#3c1ee6] w-full ${uppercase ? 'uppercase' : ''}`}
+        className={`border border-gray-300 rounded px-3 py-2 outline-none focus:border-[#E61E25] w-full ${uppercase ? 'uppercase' : ''}`}
       />
     </div>
   )

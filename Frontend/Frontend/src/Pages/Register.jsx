@@ -133,7 +133,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans pb-20">
       {/* Main Header */}
-      <header className="bg-[#1e5de6] py-6 px-4 shadow-md sticky top-0 z-50">
+      <header className="bg-[#E61E25] py-6 px-4 shadow-md sticky top-0 z-50">
         <h1 className="text-center text-white text-2xl font-bold leading-tight">
           Employee Joining<br />Details
         </h1>
@@ -164,7 +164,7 @@ const handleSubmit = async (e) => {
         <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
           {/* Floating Pill Header */}
           <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#E61E25] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Personal Details
              </span>
           </div>
@@ -189,7 +189,7 @@ const handleSubmit = async (e) => {
                     value={formData.contactNumber}
                     onChange={handleChange}
                     type="number" 
-                    className="w-full border border-gray-300 rounded-r px-3 py-2 outline-none focus:border-[#3c1ee6]" 
+                    className="w-full border border-gray-300 rounded-r px-3 py-2 outline-none focus:border-[#E61E25]" 
                     placeholder="Contact Number" 
                 />
               </div>
@@ -204,7 +204,7 @@ const handleSubmit = async (e) => {
                     value={formData.emergencyContactNumber}
                     onChange={handleChange}
                     type="number" 
-                    className="w-full border border-gray-300 rounded-r px-3 py-2 outline-none focus:border-[#3c1ee6]" 
+                    className="w-full border border-gray-300 rounded-r px-3 py-2 outline-none focus:border-[#E61E25]" 
                     placeholder="Emergency Contact Number" 
                 />
               </div>
@@ -236,7 +236,7 @@ const handleSubmit = async (e) => {
         {/* --- Section 3: Emergency Contact Details --- */}
         <div className="bg-white rounded-xl shadow-sm p-6 pt-12 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#E61E25] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Emergency Contact Details
              </span>
           </div>
@@ -275,7 +275,7 @@ const handleSubmit = async (e) => {
         {/* --- Section 4: Professional Details --- */}
         <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#E61E25] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Professional Details
              </span>
           </div>
@@ -292,7 +292,7 @@ const handleSubmit = async (e) => {
          {/* --- Section 5: Account Details --- */}
          <div className="bg-white rounded-xl shadow-sm p-6 pt-10 relative mt-8">
            <div className="absolute -top-5 left-0">
-             <span className="bg-[#3c1ee6] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
+             <span className="bg-[#E61E25] text-white px-6 py-2 rounded-r-full font-medium shadow-md">
                Account Details
              </span>
           </div>
@@ -307,7 +307,7 @@ const handleSubmit = async (e) => {
 
         {/* Submit Button Area */}
         <div className="mt-6">
-           <button onClick={handleSubmit} className="w-full bg-[#3c1ee6] text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-blue-700 transition">
+           <button onClick={handleSubmit} className="w-full bg-[#E61E25] text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-red-700 transition">
              Submit Details
            </button>
         </div>
