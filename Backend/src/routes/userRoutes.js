@@ -3,6 +3,7 @@ const {
   registerUser,
   getUserProfile,
   logoutUser,
+  getAllUser,
 } = require("../controllers/userController");
 const { protect } = require("../middlewares/authMiddleware");
 const upload = require("../middlewares/uploadMiddleware");
@@ -16,5 +17,6 @@ router.post("/logout", protect, logoutUser);
 
 // User profile (protected route)
 router.get("/me", protect, getUserProfile);
+router.get("/all", getAllUser);
 
 module.exports = router;
