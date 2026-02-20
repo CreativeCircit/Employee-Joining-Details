@@ -7,7 +7,16 @@ const uploadToCloudinary = (fileBuffer, folder = "profiles") => {
     const stream = cloudinary.uploader.upload_stream(
       {
         folder,
-        transformation: [{ width: 500, height: 500, crop: "fill" }],
+        transformation: [
+          { 
+            width: 600, 
+            height: 800,       
+            crop: "thumb",     
+            gravity: "face",   
+            zoom: 0.8          
+          },
+          { fetch_format: "auto", quality: "auto" } 
+        ],
       },
       (error, result) => {
         if (result) resolve(result);

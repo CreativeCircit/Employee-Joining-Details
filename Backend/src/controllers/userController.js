@@ -92,8 +92,18 @@ const logoutUser = (req, res) => {
   }
 };
 
+const getAllUser = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   registerUser,
   getUserProfile,
   logoutUser,
+  getAllUser,
 };
