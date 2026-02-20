@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [cardData, setCardData] = useState(allData);
 
-  const [mode, setMode] = useState(localStorage.getItem("appMode"));
+  const [mode, setMode] = useState(localStorage.getItem("appMode")||"corporate");
 
   useEffect(() => {
     fetchAll();
