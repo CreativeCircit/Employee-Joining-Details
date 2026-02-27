@@ -1,9 +1,9 @@
-const User = require("../models/userModel");
+const Employee = require("../models/employeeModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const uploadToCloudinary = require("../utils/uploadToCloudinary");
 
-const registerUser = async (req, res) => {
+const registerEmployee = async (req, res) => {
   try {
 
     if (!req.file) {
@@ -25,7 +25,7 @@ const registerUser = async (req, res) => {
        return data;
     };
 
-    const newEmployee = await User.create({
+    const newEmployee = await Employee.create({
       passportPhoto: result.secure_url,
       personalDetails: parseIfNeeded(personalDetails),
       emergencyContacts: parseIfNeeded(emergencyContacts),
@@ -33,7 +33,6 @@ const registerUser = async (req, res) => {
       accountDetails: parseIfNeeded(accountDetails),
     });
 
-    console.log("--- 4. Database Save Success ---");
     res.status(201).json({
       success: true,
       message: "Employee registered successfully",
@@ -57,9 +56,9 @@ const registerUser = async (req, res) => {
   }
 };
 
-const getUserProfile = async (req, res) => {
+const getEmployeeProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.user._id);
+    const user = await Employee.findById(req.user._id);
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
@@ -94,7 +93,8 @@ const logoutUser = (req, res) => {
 
 const getAllUser = async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await Employee.find();
+    
     res.json(users);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -102,8 +102,8 @@ const getAllUser = async (req, res) => {
 };
 
 module.exports = {
-  registerUser,
-  getUserProfile,
+  registerEmployee,
+  getEmployeeProfile,
   logoutUser,
   getAllUser,
 };

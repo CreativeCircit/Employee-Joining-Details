@@ -26,7 +26,7 @@ const authService = {
   },
 
   getAll: async () => {
-    const  data  = await api.get("/users/all");
+    const  data  = await api.get("/users/all")
     return data;
   },
 };

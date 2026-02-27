@@ -1,7 +1,7 @@
 const express = require("express");
 const {
-  registerUser,
-  getUserProfile,
+  registerEmployee,
+  getEmployeeProfile,
   logoutUser,
   getAllUser,
 } = require("../controllers/userController");
@@ -10,13 +10,10 @@ const upload = require("../middlewares/uploadMiddleware");
 const jwt = require("jsonwebtoken");
 
 const router = express.Router();
-
-// Register user
-router.post("/register",upload.single("photo"), registerUser);
+router.post("/register",upload.single("photo"), registerEmployee);
 router.post("/logout", protect, logoutUser);
 
-// User profile (protected route)
-router.get("/me", protect, getUserProfile);
+router.get("/me", protect, getEmployeeProfile);
 router.get("/all", getAllUser);
 
 module.exports = router;
