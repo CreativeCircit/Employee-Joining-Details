@@ -14,7 +14,7 @@ function EmployeeDetails() {
   return (
     <section className={`divide-y flex flex-col gap-2 p-2 ${ mode== "creative" ? 
     " bg-[#0C1014] text-white" 
-    : "bg-slate-100"}`}>
+    : "bg-slate-100 text-black"}`}>
       <div className="p-8 bprder flex gap-4 items-center">
         <div
           className="h-[12vh]  aspect-square rounded-full"
