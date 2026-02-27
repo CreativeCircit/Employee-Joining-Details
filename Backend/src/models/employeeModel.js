@@ -1,23 +1,18 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-// 1. Sub-schema for Emergency Contacts (to ensure structure)
 const emergencyContactSchema = new mongoose.Schema({
   name: { type: String, required: true },
   contactNumber: { type: String, required: true },
   relation: { type: String, required: true },
 }, { _id: false });
 
-const userModel = new mongoose.Schema(
+const employeeModel = new mongoose.Schema(
   {
-    // --- Section 1: Photo ---
-    // Store the URL (e.g., from Cloudinary or local upload path)
     passportPhoto: { 
       type: String, 
       required: [true, "Passport photo is required"] 
     },
-
-    // --- Section 2: Personal Details ---
     personalDetails: {
       fullName: { 
         type: String, 
@@ -34,7 +29,7 @@ const userModel = new mongoose.Schema(
       personalEmail: {
         type: String,
         required: [true, "Personal Email is required"],
-        unique: true, // Prevents duplicate profiles
+        unique: true, 
         match: [
           /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
           "Please enter a valid email",
@@ -43,7 +38,7 @@ const userModel = new mongoose.Schema(
       panNumber: { 
         type: String, 
         required: true, 
-        uppercase: true, // Auto-converts to UPPERCASE
+        uppercase: true,
         unique: true 
       },
       adhaarNumber: { 
@@ -64,18 +59,16 @@ const userModel = new mongoose.Schema(
       },
     },
 
-    // --- Section 3: Emergency Contact Details (Array) ---
     emergencyContacts: {
       type: [emergencyContactSchema],
       validate: {
         validator: function(v) {
-          return v && v.length === 3; // Enforce exactly 3 contacts based on your form
+          return v && v.length === 3; 
         },
         message: "You must provide exactly 3 emergency contacts."
       }
     },
 
-    // --- Section 4: Professional Details ---
     professionalDetails: {
       dateOfJoining: { type: Date, required: true },
       workLocation: { type: String, required: true },
@@ -84,7 +77,6 @@ const userModel = new mongoose.Schema(
       previousOrganization: { type: String, required: true },
     },
 
-    // --- Section 5: Account Details ---
     accountDetails: {
       uanNumber: { type: String, },
       bankName: { type: String, },
@@ -100,5 +92,5 @@ const userModel = new mongoose.Schema(
   }
 );
 
-const Employee = mongoose.model("Employee", userModel);
+const Employee = mongoose.model("Employee", employeeModel);
 module.exports = Employee;

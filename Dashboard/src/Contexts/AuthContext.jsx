@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { handleRequest } from "../Services/handleRequest";
 import authService from "../Services/authService";
 
 const AuthApi = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [allData, setAllData] = useState();
+  const [allData, setAllData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [cardData, setCardData] = useState(allData);
 
@@ -18,7 +17,7 @@ export const AuthProvider = ({ children }) => {
   const fetchAll = async () => {
     try {
       setLoading(true);
-      const { data } = await authService.getAll();
+      const  {data}  = await authService.getAll();
       setAllData(data);
       setCardData(data)
     } catch (error) {
